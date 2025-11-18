@@ -1,6 +1,9 @@
 import { useState } from "react";
+
 const Counter = () => {
   const [count, setCount] = useState(0);
+  const myAudio = new Audio("click.wav");
+
   const handleClick = (e) => {
     const { name } = e.target;
     if (name === "inc") {
@@ -14,17 +17,18 @@ const Counter = () => {
         setCount(0);
       }
     }
+    myAudio.play();
   };
   return (
     <main>
-      <button name="inc" onClick={(e) => handleClick(e)}>
-        +
+      <button name="dec" onClick={(e) => handleClick(e)}>
+        -
       </button>
       <div className="number">
         <p>{count}</p>
       </div>
-      <button name="dec" onClick={(e) => handleClick(e)}>
-        -
+      <button name="inc" onClick={(e) => handleClick(e)}>
+        +
       </button>
     </main>
   );
