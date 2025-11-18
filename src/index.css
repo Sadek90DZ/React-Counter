@@ -10,7 +10,7 @@ body {
   background-color: #bdadc9;
 }
 
-.counter {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
